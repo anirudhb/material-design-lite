@@ -32,6 +32,7 @@
     "eslint-config-google": "^0.5.0",
     "eslint-plugin-tape": "^1.1.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "ghooks": "^1.3.2",
     "isparta-loader": "^2.0.0",
     "istanbul": "^0.4.4",
     "karma": "^1.1.1",
@@ -54,6 +55,7 @@
     "stylelint-selector-bem-pattern": "^1.0.0",
     "tape": "^4.6.0",
     "testdouble": "^1.6.0",
+    "validate-commit-msg": "^2.6.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
@@ -64,5 +66,13 @@
     "plugins": [
       "transform-object-assign"
     ]
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    },
+    "validate-commit-msg": {
+      "helpMessage": "Invalid commit message %s. Please see https://github.com/conventional-changelog/conventional-changelog/blob/v0.5.3/conventions/angular.md for information on how to format commit messages. Also, if this commit is on a development / WIP branch, you can disable this by running `git commit --no-verify`."
+    }
   }
 }
